@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sachetwasti1997/config-server-repo
+          default-label: main
+          #          username: sachetwasti1997
+          #          password: <TOKEN_HERE>
+          clone-on-start: true
+        bootstrap: true
+    fail-fast: true
+  #    security:
+  #      user:
+  #        name: spring_cloud_user
+  #        password: Test123@
+  # This file is Required in case of loading configuration in bootstrap phase which has priority over application.yml
